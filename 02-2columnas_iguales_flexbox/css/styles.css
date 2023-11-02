@@ -1,0 +1,56 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/** CODIGO AQUI de la página 02-2columnas_iguales. **/
+@media (min-width: 7.68rem) {
+    .dos-columnas {
+        /* Siempre que utilicemos display flex sí cambia un poco el diseño en comparación con GRID. */
+        display: flex;
+        /* Aquí nos permite alinear contenido de izquierda a derecha. */
+        justify-content: space-between;
+        /* Y aquí encontramos la separación de las dos columnas para este caso. */
+        column-gap: 2rem;
+    }
+}
+
+/* El siguiente bloque se puede utilizar para otros navegadores.
+.entrada-blog{
+    flex: 0 0 content(50% - 1rem);
+} */
