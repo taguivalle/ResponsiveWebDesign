@@ -48,4 +48,30 @@ p {
 }
 
 
-/** CODIGO AQUI **/
+/** CODIGO AQUI para la página 05. con el patron de tres columnas Esta vez con GRID. **/
+@media (min-width: 7.68rem) {
+
+    /* Este es el elemento padre. */
+    .contenedor-grid {
+        /* Siempre que utilicemos GRID podemos utilizar las propiedades. */
+        display: grid;
+        /* Aquí vamos a dibujar el contenido. O sea, colocar los sidebar en la posición que debe tener (a los lados).*/
+        grid-template-areas: "izquierda contenido derecha";
+        /* Aquí nos permite alinear contenido de izquierda a derecha en tres columnas. */
+        grid-template-columns: 1fr 3fr 1fr;
+        /* Aquí solucionamos la colocación automática de diseño de cuadrícula. */
+        grid-auto-flow: column;
+        /* Y aquí encontramos la separación de las tres columnas para este caso. */
+        column-gap: 2rem;
+    }
+
+    .contenido-principal {
+        /* El contenido principal se posiciona en el centro de la página. */
+        grid-area: contenido;
+    }
+
+    .sidebar-1 {
+        grid-area: izquierda;
+    }
+
+}

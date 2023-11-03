@@ -47,4 +47,30 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+/** CODIGO AQUI de la página 06-3columnas con flex-box**/
+@media (min-width: 7.68rem) {
+
+    /* Este es el contenedor padre. */
+    .contenedor-flex {
+        /* Siempre que utilicemos display flex sí cambia un poco el diseño en comparación con GRID. */
+        display: flex;
+        /* Aquí nos permite alinear contenido uno a la izquierda y el otro a la derecha. */
+        justify-content: space-between;
+        /* Y aquí encontramos la separación de las tres columnas para este caso. */
+        column-gap: 2rem;
+    }
+
+    .contenido-principal {
+        flex-basis: calc(60% - 1rem);
+    }
+
+    .sidebar {
+        flex-basis: calc(20% - 1rem);
+    }
+
+    /* Con este contenido al sidebar 1 aparece al lado izquierdo y permitimos qué la columna central y el sidebar 
+    2 se muestren normalmente. */
+    .sidebar-1 {
+        order: -1;
+    }
+}

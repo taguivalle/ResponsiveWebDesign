@@ -38,4 +38,14 @@ h1 {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+/** CODIGO AQUI para la página 3. Esta vez con GRID. **/
+@media (min-width: 7.68rem) {
+    .tres-columnas {
+        /* Siempre que utilicemos GRID podemos utilizar las propiedades. */
+        display: grid;
+        /* Aquí nos permite alinear contenido de izquierda a derecha en tres columnas. */
+        grid-template-columns: repeat(3, 1fr);
+        /* Y aquí encontramos la separación de las tres columnas para este caso. */
+        column-gap: 2rem;
+    }
+}
