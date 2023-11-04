@@ -47,4 +47,27 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+/* Aquí nos encontramos con el CSS del bloque div contenedor pero con flex-box. Por lo tanto los elementos se distribuyen
+de izquierda a derecha*/
+@media (min-width: 480px) {
+    .colum-drop-flex {
+        display: flex;
+        justify-content: space-between;
+        /* Con el wrap permite posicionar las columnas de acuerdo a las necesidades.*/
+        flex-wrap: wrap;
+    }
+
+    .contenido-principal,
+    .principal {
+        flex: calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 768px) {
+
+    .contenido-principal,
+    .first,
+    .second {
+        flex: 0 0 calc(33.3% - 2rem);
+    }
+}

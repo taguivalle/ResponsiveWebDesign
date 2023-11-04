@@ -49,4 +49,34 @@ p {
 
 
 
-/** CODIGO AQUI **/
+/* Aquí están los estilos del código de la página 07 column drop. Como son dos columnas vamos a utilizar dos mq. En
+esta occasion vamos a trabajar con GRID. */
+@media (min-width: 480px) {
+    .column-drop-css {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+.segunda {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
+
+@media (min-width: 768px) {
+    .column-drop-css {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .primera {
+        grid-column: 2 / 3;
+        grid-row: unset;
+    }
+
+    .segunda {
+        grid-column: 3 / 4;
+        grid-row: unset;
+    }
+}
