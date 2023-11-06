@@ -49,4 +49,15 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+/* El código con mostly fluid es un poco más fluído cada ves se vea en un dispositivo diferente las margenes van a cambiar. */
+.contenedor {
+    max-width: 120rem;
+    /* Con este width el contenido no llega hasta las orillas. */
+    width: 95%;
+    /* Los márgenes va a cer cero a la derecha, abajo y a la izquierda de manera automática. */
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}

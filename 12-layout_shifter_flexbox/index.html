@@ -3,31 +3,43 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Patrones Responsive Web Design</title>
+    <title>TinyTweaks</title>
+    <!-- Con este link se inserta el icono en el título de la pagina "Front End responsive" 
+    https://imagen.online-convert.com/es/convertir/png-a-ico. -->
+    <link rel="shortcut icon" href="../13-mostly_fluid/icons/rompecabezas.ico" type="image/x-icon">
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
+    <link rel="preload" href="css/styles.css">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-
-    <div class="contenedor">
-        <aside>
-            <h1>Titulo Blog (primera columna)</h1>
+    <!-- Este el div principal para el contenido o sea el padre. -->
+    <div class="contenedor layout-shifter">
+        <aside class="sidebar">
+            <h1>Patrones Responsive Web Design Titulo Blog (primera columna) con Tiny Tweaks</h1>
             <p>
-                Titulo Blog, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Titulo Blog, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </aside>
 
-        <main>
+        <main class="main-content">
             <article class="entrada-blog">
                 <h1>Layout Shifter (segunda columna)</h1>
                 <img src="img/imagen1.jpg">
                 <p>
-                    Titulo Blog, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Titulo Blog, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </article>
 
@@ -35,13 +47,16 @@
                 <h1>Layout Shifter (tercera columna)</h1>
                 <img src="img/imagen2.jpg">
                 <p>
-                    Titulo Blog, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Titulo Blog, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat. Duis aute irure dolor in reprehenderit
+                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </article>
         </main>
     </div>
-
+    <!-- Aquí termina el div principal para el contenido principal. -->
 </body>
 
 </html>

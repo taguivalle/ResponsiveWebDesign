@@ -48,4 +48,21 @@ p {
 }
 
 
-/** CODIGO AQUI **/
+/* Aquí nos encontramos con el CSS del bloque div contenedor pero con FLEX-BOX. Para la barra lateral. */
+@media (min-width: 768px) {
+    .con-sidebar {
+        display: flex;
+        /* En este patrón de diseño tenemos un flex-box más pequeño que el contenido principal y a su vez posicionado 
+        al lado derecho. Para las tiendas virtuales se utiliza mucho que el side bar se encuentre al lado derecho. */
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    aside {
+        flex: 1;
+    }
+
+    article {
+        flex: 3;
+    }
+}

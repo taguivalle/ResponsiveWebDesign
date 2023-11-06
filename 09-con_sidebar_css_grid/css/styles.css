@@ -47,4 +47,24 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+/* Aquí nos encontramos con el CSS del bloque div contenedor pero con GRID. Para la barra lateral. */
+@media (min-width: 768px) {
+    .con-sidebar {
+        display: grid;
+        /* En este patrón de diseño tenemos un grid más pequeño que el contenido principal y a su vez posicionado al lado
+        derecho. Para las tiendas virtuales se utiliza mucho que el side bar se encuentre al lado derecho. */
+        /* grid-template-columns: 3fr 1fr;
+        column-gap: 4rem; */
+        grid-template-columns: 1fr 3fr;
+        column-gap: 4rem;
+        /* Esta línea le dice a CSS GRID que lo acomode el contenido en pero en columnas. */
+        grid-auto-flow: column;
+    }
+
+    aside {
+        grid-column: 1 / 2;
+        /* Con esta línea se posicionan a la derecha. 
+        grid-column: 2 / 3;
+        */
+    }
+}

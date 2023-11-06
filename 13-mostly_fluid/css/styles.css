@@ -14,6 +14,7 @@ body {
     font-size: 1.6rem;
     line-height: 2;
 }
+
 h1 {
     font-size: 4rem;
 }
@@ -37,3 +38,15 @@ p {
 }
 
 /** CODIGO AQUI **/
+/* Este es el contenido de las columnas. Pero iniciamos con el titulo principal con tiny tweaks. */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* Con tiny tweaks se hacen pequeños ajustes. */
+@media (min-width: 768px) {
+    .h1 {
+        font-size: 6rem;
+    }
+}

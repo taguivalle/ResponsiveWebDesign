@@ -47,5 +47,42 @@ p {
     text-transform: uppercase;
 }
 
+/* Desde aquí se encuentra los estilos del layout content pero con GRID*/
+@media (min-width: 768px) {
+    .layout-shifter {
+        display: grid;
+        grid-template-areas: "contenido" "inferior";
+    }
 
-/** CODIGO AQUI **/
+    /*  Este sidebar se va a colocar dentro del área de inferior.*/
+    .sidebar {
+        grid-area: inferior;
+    }
+
+    /* Este es el tamaño de la tabla. en donde tenemos dos entradas una al lado izquierdo y la otra al lado derecho. */
+    .main-content {
+        grid-area: contenido;
+        display: grid;
+        grid-template-areas: "entrada1 entrada2";
+        grid-template-columns: repeat(2. 1rem);
+        column-gap: 3rem;
+    }
+}
+
+/* Este es el contenido de las columnas. */
+@media (min-width: 992px) {
+    .layout-shifter {
+        grid-template-areas: "contenido sidebar";
+        column-gap: 2rem;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .main-content {
+        grid-area: contenido;
+        grid-template-areas: "entrada1" "entrada2";
+        grid-template-columns: sunset;
+    }
+}

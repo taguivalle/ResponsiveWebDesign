@@ -47,4 +47,50 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+/* Desde aquí se encuentra los estilos del layout content pero con FLEX-BOX; este layout viene a ser el padre. */
+@media (min-width: 768px) {
+    .layout-shifter {
+        display: flex;
+        /*Para que la primera columna se presente en la parte inferior, o sea de abajo hacia arriba. */
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .main-content {
+        /* Esta línea nos muestra el factor de crecimiento. */
+        display: flex;
+        /* Para separar las columnas*/
+        justify-content: space-between;
+    }
+
+    .entrada-blog {
+        flex: 0 0 calc(50% 2rem);
+    }
+}
+
+/* Este es el contenido de las columnas. */
+@media (min-width: 992px) {
+    .layout-shifter {
+        flex-direction: row;
+        /* Con esta línea se le hace la separación a la mq. */
+        justify-content: space-between;
+    }
+
+    /* Este es el tamaño de la tabla. en donde tenemos dos entradas una al lado izquierdo y la otra al lado derecho. */
+    .main-content {
+        /* Esta línea nos muestra el factor de crecimiento. */
+        flex-wrap: 0 0 calc(66.6% - 2rem);
+        /* Al colocarle wrap; porqué por default flex-box se va a posicionar los elementos de izquierda a derecha. */
+        flex-wrap: wrap;
+    }
+
+    .sidebar {
+        flex-wrap: 0 0 calc(33.3% - 2rem);
+        order: 2;
+    }
+
+    .entrada-blog {
+        /*Con esta línea cada entrada va a tomar todo el espacio disponible que tenga el contenido principal. */
+        flex: 0 0 100%;
+    }
+}
